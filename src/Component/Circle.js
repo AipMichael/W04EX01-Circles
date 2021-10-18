@@ -2,15 +2,15 @@ import "./circle.css";
 import React, { useState } from "react";
 
 function Circle() {
-  const [state, setState] = useState(true);
+  const [selected, setState] = useState(false);
   function changeColor() {
-    setState(!state);
+    setState(!selected);
   }
   return (
     <div
       className="circles"
       onClick={changeColor}
-      style={{ backgroundColor: state ? "orange" : "grey" }}
+      style={{ backgroundColor: selected ? "orange" : "grey" }}
     ></div>
   );
 }
